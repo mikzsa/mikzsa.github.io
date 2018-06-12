@@ -1,0 +1,166 @@
+
+.welcome {
+  text-align:center;
+  border:none;
+  font:normal 72px/normal "arvo", Helvetica, sans-serif;
+  color:rgba(255,255,255,1);
+  -o-text-overflow:clip;
+  text-overflow:clip;
+  text-shadow:0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902);
+  -webkit-transition:all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition:all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition:all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition:all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.container {
+  position: fixed;
+  top: 65%;
+  left: 65%;
+  margin-top: -50px;
+  margin-left: -100px;
+    }
+
+html {
+  width: 100%;
+ height: 100%;
+ background: fixed;
+ background: #282537;
+ background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.text {
+
+  border: none;
+  font: normal 19px/1 "abel", Helvetica, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+@import "compass/css3";
+
+@import "compass/css3";
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@font-face {
+  font-family: 'ModernPictogramsNormal';
+  src: url("http://s202540075.onlinehome.us/codepen/fonts/modernpics-webfont.eot");
+  src: url("http://s202540075.onlinehome.us/codepen/fonts/modernpics-webfont.eot?#iefix") format("embedded-opentype"), url("http://s202540075.onlinehome.us/codepen/fonts/modernpics-webfont.woff") format("woff"), url("http://s202540075.onlinehome.us/codepen/fonts/modernpics-webfont.ttf") format("truetype"), url("http://s202540075.onlinehome.us/codepen/fonts/modernpics-webfont.svg#ModernPictogramsNormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a, input[type='radio'] + label{
+		text-align: center;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		font-family: 'Trebuchet MS', Helvetica, sans-serif;	
+	}
+
+
+input[type='radio']{
+	display: none;
+}
+$btn_width:110px;
+$btn_height:$btn_width * .3;
+/* -------------------
+	Default State
+-------------------- */
+a.glowBtn, input[type='radio'] + label{
+	z-index: 10;
+	margin: 0 10px 10px 0;
+	width: $btn_width * 1.05;
+	height: $btn_height * 1.13;
+	line-height: $btn_height * 1.1;
+	position: relative;
+	font-size: $btn_width * .12;
+	letter-spacing: .1em;
+	color: #0e0e0e;
+	text-shadow: 0 1px 0 rgba(255,255,255,.1);
+	@include background-image(linear-gradient(#111,#000));
+	@include border-radius(3px);
+	@include box-shadow(
+		//-----Button Beveling-----
+		//top dark bevel
+		0 -1px 0 rgba(0,0,0,.2),
+		//full bevel
+		0 0 0 1px rgba(0,0,0,.3),
+		//bottom highlight bevel
+		0 1px 0 rgba(255,255,255,.05),
+		//slight outer glow
+		0 0 3px rgba(255,255,255,.2));
+}
+
+//This is the style for the actual Button
+a.glowBtn:after, input[type='radio'] + label:after{
+	z-index: -1;
+	content: '';
+	cursor: pointer;
+	// center content
+	top:$btn_height * .06;
+	margin-left: 50%;
+	left: -$btn_width /2;
+	width: $btn_width;
+	height: $btn_height;
+	display: block;
+	position: absolute;
+	@include background-image(linear-gradient(#444,#373738));
+	@include box-shadow(
+		inset 0 2px 1px -1px rgba(255,255,255,.2),
+		inset 0 -2px 1px -1px rgba(0,0,0,.2),
+		//-----Drop Shadow-----
+		0 12px 12px rgba(0,0,0,.5),
+		0 4px 6px rgba(0,0,0,.3));
+	@include border-radius(2px);
+}
+/* -------------------
+	Hover States
+-------------------- */
+a.glowBtn:hover, a.hover, input[type='radio'] + label:hover{
+	color: #AEAEAE;
+	text-shadow:0 -1px 0 rgba(0,0,0,.4);
+}
+a.glowBtn:hover:after, a.hover:after, input[type='radio'] + label:hover:after{
+	@include background-image(linear-gradient(#545454,#373738));
+}
+/* -------------------
+	Active States
+-------------------- */
+a.glowBtn:active, a.active,a.active:hover, input[type='radio']:checked + label{
+	color: #00ccff;
+	text-shadow:0 -1px 0 rgba(0,0,0,.3),0 0px 30px rgba(0,255,255,.7);
+	@include box-shadow(
+		//-----Button Beveling-----
+		//top dark bevel
+		0 -1px 0 rgba(0,193,255,.2),
+		//full bevel
+		0 0 0 1px rgba(0,0,0,.4),
+		//bottom highlight bevel
+		0 1px 0 rgba(255,255,255,.05),
+		//slight outer glow
+		0 0 20px rgba(0,193,255,.1),
+		0 0 30px rgba(0,193,255,.1));
+}
+a.glowBtn:active, a.active,a.active:hover{
+	text-shadow:0 -1px 0 rgba(0,0,0,1),0 0px 30px rgba(0,255,255,1),0 0px 50px rgba(0,255,255,1);
+	}
+a.glowBtn:active:after, a.active:after,a.active:hover:after, input[type='radio']:checked + label:after{
+	@include background-image(linear-gradient(#262627, #2d2d2e));
+	@include box-shadow(
+		inset 0 5px 6px rgba(0,0,0,.3), 
+		inset 0 0 4px rgba(0,0,0,.9), 0 0 0 black);
+}
