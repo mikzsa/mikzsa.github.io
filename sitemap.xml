@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:61373/</loc>
+    <loc>http://www.miks.cc/</loc>
     <lastmod>2022-01-22T00:20:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:61373/posts/portable-audio-sucks/</loc>
+    <loc>http://www.miks.cc/posts/portable-audio-sucks/</loc>
     <lastmod>2022-01-22T00:20:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:61373/posts/</loc>
+    <loc>http://www.miks.cc/posts/</loc>
     <lastmod>2022-01-22T00:20:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:61373/categories/</loc>
+    <loc>http://www.miks.cc/categories/</loc>
   </url><url>
-    <loc>http://localhost:61373/series/</loc>
+    <loc>http://www.miks.cc/series/</loc>
   </url><url>
-    <loc>http://localhost:61373/tags/</loc>
+    <loc>http://www.miks.cc/tags/</loc>
   </url>
 </urlset>
